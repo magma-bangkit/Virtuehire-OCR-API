@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM tensorflow/tensorflow:latest
 
 COPY ./requirements.txt /app/requirements.txt
 
@@ -7,6 +7,8 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 COPY . /app
 
 WORKDIR /app
+
+RUN apt-get update && apt-get install -y git git-lfs
 
 RUN git clone https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 && \
     mv  all-MiniLM-L6-v2 /app/model/all-MiniLM-L6-v2
