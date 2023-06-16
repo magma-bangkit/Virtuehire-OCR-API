@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="https://i.ibb.co/4gwmyqT/Twitter-header-4.png" alt="Twitter Header">
+</div>
+
 # Virtuehire-OCR-API
 
 [![GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-lightgrey.svg)](https://github.com/magma-bangkit/VirtuHire-OCR-API)
