@@ -1,2 +1,1 @@
-*.h5 filter=lfs diff=lfs merge=lfs -text
 model/ner-model/transformer/model filter=lfs diff=lfs merge=lfs -text

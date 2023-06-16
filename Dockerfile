@@ -8,4 +8,9 @@ COPY . /app
 
 WORKDIR /app
 
+RUN git clone https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 && \
+    mv  all-MiniLM-L6-v2 /app/model/all-MiniLM-L6-v2
+
+RUN git lfs pull -I model/ner-model/transformer/model
+
 CMD python main.py
