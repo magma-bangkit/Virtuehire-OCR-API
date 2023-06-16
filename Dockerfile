@@ -15,4 +15,6 @@ RUN git clone https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 && \
 
 RUN git lfs pull -I model/ner-model/transformer/model
 
+EXPOSE 8080
+
 CMD python main.py
