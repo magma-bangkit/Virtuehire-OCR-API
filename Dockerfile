@@ -8,7 +8,7 @@ COPY . /app
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y git git-lfs
+RUN apt-get update && apt-get install -y git git-lfs ffmpeg libsm6 libxext6
 
 RUN git clone https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 && \
     mv  all-MiniLM-L6-v2 /app/model/all-MiniLM-L6-v2
