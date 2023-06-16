@@ -21,9 +21,10 @@ The usage of this repo is to scan documents to extract textual information such 
 ## Getting Started
 Here is what you need to be able to run this repo
 
-- Stack 1
-- Stack 2
-- Stack 3
+- Python
+- Tensorflow
+- Flask
+- OpenCV
 
 ## Installation
 
@@ -45,11 +46,17 @@ Provide examples and instructions on how to use the project. This can include co
 
 ## Features
 
-Highlight the main features of the project. Enumerate the functionalities and explain how they can be useful to the users. You can also provide a bullet-point list or a table to summarize the features.
+<a href="https://ibb.co/rtjQN9y"><img src="https://i.ibb.co/Sxj6GSv/image.png" alt="image" border="0"></a>
 
-- Feature 1
-- Feature 2
-- Feature 3
+Resume parsing using NER (Named Entity Recognition), OCR (Optical Character Recognition), and Embedding involves an automated workflow for extracting relevant information from user-uploaded resumes. The process begins with the user uploading their resume, which can be in either PDF or image format. If the file is an image, it undergoes image processing using OpenCV to enhance its readability. Then, OCR is applied to recognize the characters within the image and convert them into machine-readable text. On the other hand, if the file is a PDF, it is directly parsed to extract the text.
+
+The extracted text, whether from the OCR or PDF parsing step, is then passed through an NER model. This model tags the text with relevant entities such as skills, work experience, education, and other relevant information. The tagged text is then transformed into an embedding vector using the all-MiniLM-L6-v2 model.
+
+Next, the embedding vector is utilized to search for matching skills in a pre-defined skills database. The goal is to identify the skills mentioned in the resume and find corresponding entries in the database. This matching process helps in assessing the applicant's qualifications and capabilities.
+
+Finally, the results obtained from the skills matching process are used to auto-fill the user's profile. The relevant information extracted from the resume, such as skills and work experience, is automatically populated into the appropriate fields in the user's profile, streamlining the process and saving time.
+
+Overall, this resume parsing workflow incorporating NER, OCR, and Embedding provides an efficient and accurate method for extracting and utilizing information from user resumes, enhancing the automation and effectiveness of the profile creation process.
 
 ## Acknowledgements
 
